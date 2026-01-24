@@ -1,5 +1,4 @@
 #include "SugarSupplier.h"
-#include <cstring>
 
 SugarSupplier::SugarSupplier(const char *SupplierName)
 {

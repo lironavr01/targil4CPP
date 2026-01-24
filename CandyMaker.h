@@ -14,4 +14,5 @@ public:
     CandyMaker(const char *sugarSupplierName, const char *chocolateSupplierName);
     ~CandyMaker();
     void makeCandy(const char *candyName);
+    friend std::ostream &operator<<(std::ostream &os, const SugarSupplier &supplier);
 };

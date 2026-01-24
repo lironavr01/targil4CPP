@@ -20,5 +20,5 @@ void CandyMaker::makeCandy(const char *candyName)
 {
     currCandy = new char[std::strlen(candyName) + 1];
     std::strcpy(currCandy, candyName);
-    std::cout << "Using sugar from " << *sName << " and chocolate from " << *cName << " to create " << *currCandy << "!!" << std::endl;
+    std::cout << "Using sugar from " << sName << " and chocolate from " << cName << " to create " << currCandy << "!!" << std::endl;
 }
