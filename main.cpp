@@ -1,11 +1,11 @@
 #include <iostream>
-// Include the headers for your classes:
-// #include "SugarSupplier.h"
-// #include "ChocolateSupplier.h"
-// #include "CandyMaker.h"
-// #include "CandyBox.h"
+#include "SugarSupplier.h"
+#include "ChocolateSupplier.h"
+#include "CandyMaker.h"
+#include "CandyBox.h"
 
-int main() {
+int main()
+{
     // 1. Create a CandyMaker with sugar and chocolate supplier names
     CandyMaker myCandyMaker("SugarCo", "ChocoDelight");
 
@@ -17,7 +17,7 @@ int main() {
     myCandyMaker.makeCandy("Fudge Surprise");
 
     // 4. Create a CandyBox for storing candy names
-    CandyBox<Candy> candyBox(5);
+    CandyBox<const char *> candyBox(5);
 
     // 5. Add items
     candyBox.addItem("SourLollipop");

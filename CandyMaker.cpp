@@ -1,24 +1,20 @@
 #include "CandyMaker.h"
 
-CandyMaker::CandyMaker(const char *sugarSupplierName, const char *chocolateSupplierName)
+CandyMaker::CandyMaker(const char *sugarSupplierName, const char *chocolateSupplierName) : SugarSupplier(sugarSupplierName), ChocolateSupplier(chocolateSupplierName)
 {
-    sName = new char[std::strlen(sugarSupplierName) + 1];
-    cName = new char[std::strlen(chocolateSupplierName) + 1];
-    std::strcpy(sName, sugarSupplierName);
-    std::strcpy(cName, chocolateSupplierName);
     currCandy = nullptr;
 }
 
 CandyMaker::~CandyMaker()
 {
-    delete[] sName;
-    delete[] cName;
     delete[] currCandy;
 }
 
 void CandyMaker::makeCandy(const char *candyName)
 {
+    if (currCandy != nullptr)
+        delete[] currCandy;
     currCandy = new char[std::strlen(candyName) + 1];
     std::strcpy(currCandy, candyName);
-    std::cout << "Using sugar from " << sName << " and chocolate from " << cName << " to create " << currCandy << "!!" << std::endl;
+    std::cout << "Using sugar from " << this->getSugarName() << " and chocolate from " << this->getChocolateName() << " to create " << currCandy << "!!" << std::endl;
 }

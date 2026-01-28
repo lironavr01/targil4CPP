@@ -1,7 +1,8 @@
+#pragma once
 #include <iostream>
 #include <cstring>
 
-class ChocolateSupplier // TODO
+class ChocolateSupplier
 {
 private:
     char *name;

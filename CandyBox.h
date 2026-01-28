@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 template <typename T>
 class CandyBox
@@ -37,7 +38,7 @@ public:
         count--;
         return true;
     }
-    void dislpayItem()
+    void displayItems()
     {
         for (int i = 0; i < count - 1; i++)
         {
